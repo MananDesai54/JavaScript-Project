@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #34495e;
+}
+#container {
+    background: #f5f5f5;
+    width: 350px;
+    height: 800px;
+    border: 10px solid #01a3a4;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    overflow-y:scroll;
+    color: black;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#container h1 {
+    margin: 50px 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls #input {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    width: 200px;
+    color: black;
+    box-shadow: inset 0 0 1px rgb(0, 0, 0);
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+.controls #add , .controls #remove ,.controls #removeAll{
+    width: 220px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    color: #eee;
+    cursor: pointer;
+}.controls #add:hover , .controls #remove:hover ,.controls #removeAll:hover{
+    transform: scale(1.05);
+}
+.controls #add:focus , .controls #remove:focus, .controls #removeAll:focus {
+    outline: none;
+}
+.controls #add {
+    background: #2980b9;
+    border: 1px solid #2980b9;
+}
+.controls #remove {
+    background: #c0392b;
+    border: 1px solid #c0392b;
+}
+.controls #removeAll {
+    background: #444;
+    border: 1px solid #444;
+}
+#list {
+    width: 300px;
+    padding-left: 18px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+#container ul li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+.mycheck #check {
+    width: 30px;
+    height: 30px;
+}
+#check:checked + label {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+}
+#container .mycheck {
+    opacity: 1;
+}
+.visual {
+    opacity: 1 !important;
+    border-radius: 10px;
+}
