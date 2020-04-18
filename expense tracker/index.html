@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="expense-tracker">
+        <h1 class="title">Expense Tracker</h1>
+        <div class="balance">
+            <p>YOUR BALANCE</p>
+            <span id="current-balance">$<p>0.00</p></span>
+        </div>
+        <div class="expenses">
+            <div class="money income">
+                <h3>INCOME</h3>
+                <span id="income">+$0.00</span>
+            </div>
+            <div class="expense money">
+                <h3>EXPENSE</h3>
+                <span id="expense">-$0.00</span>
+            </div>
+        </div>
+        <div class="history">
+            <h3 class="intitle">History</h3>
+            <div id="track-history">
+            </div>
+        </div>
+        <div class="new-transaction">
+            <h3 class="intitle">Add new Transaction</h3>
+            <form class="transaction" id="form">
+                <div class="detail">
+                    <label>Text</label>
+                    <input type="text" id="text" placeholder="Enter text..." autocomplete="off">
+                </div>
+                <div class="cost">
+                    <label>Amount</label>
+                    <div class="note">
+                        (negative - expense , positive - income)
+                    </div>
+                    <input type="text" id="amount" placeholder="Enter amount..."autocomplete="off" >
+                </div>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
