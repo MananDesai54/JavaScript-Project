@@ -121,6 +121,9 @@ header {
     animation: popup 15s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
     animation-play-state: paused;
 }
+.play {
+    animation-play-state: running;
+}
 header p {
     padding: 20px;
     text-align: center;
@@ -189,6 +192,7 @@ header::before {
 .options {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .game-title {
     margin: 10px 5px 20px 5px;
@@ -255,9 +259,29 @@ input {
 .end-game {
     background: inherit;
     display: none;
-    height: 10px;
-    width: 10px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 50px 0;
+}
+.end-game button {
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #53744E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.end-game p {
+    margin: 10px;
+    font-size: 28px;
+}
+.end-game p span {
+    font-size: 30px;
+    margin: 0 10px;
+}
+.lvl {
+    font-size: 20px;
+    margin-right: 10px;
 }

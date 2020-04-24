@@ -12,7 +12,8 @@ let play,
     text,
     difficultySET = 'easy',
     interval,
-    gameContainer;
+    gameContainer,
+    lvl;
 
 play = document.querySelector('#play');
 howtoplay = document.querySelector('#howtoplay')
@@ -27,6 +28,8 @@ score = document.querySelector('#score');
 endgame = document.querySelector('.end-game');
 text = document.querySelector('#input');
 gameContainer = document.querySelector('.game-container');
+lvl = document.querySelector('.lvl');
+timePlus = 6;
 
 play.addEventListener('click',showSection)
 howtoplay.addEventListener('click',showSection)
@@ -35,8 +38,12 @@ setting.addEventListener('click',()=>{
 })
 settingsbtn.forEach(btn=>{
     btn.addEventListener('click',()=>{
-        difficultySET =  btn.textContent;
+        difficultySET =  btn.id;
+        timePlus = difficultySET==='medium'?4:(difficultySET==='hard'?2:6);
         difficulty.classList.toggle('show');
+        lvl.innerText = difficultySET
+        clearInterval(interval);
+        resetStat();
     })
 })
 text.addEventListener('input',checkWord);
@@ -65,6 +72,8 @@ async function setWord() {
     const APIword =await getWord();
     word.innerText = APIword;
     text.focus();
+    document.querySelector('header').classList.add('play')
+    document.querySelector('header p').classList.add('play')
     interval = setInterval(()=>{
         decreaseTime()
     },1000)
@@ -74,8 +83,8 @@ function checkWord(e) {
     let timeAva = +time.textContent;
     let scoreAva = +score.textContent;
     console.log(e.target.value)
-    if(e.target.value===word.textContent) {
-        timeAva+=5;
+    if(e.target.value.toLowerCase()===word.textContent.toLowerCase()) {
+        timeAva+=timePlus;
         scoreAva+=1
         clearInterval(interval);
         text.value = '';
@@ -85,6 +94,15 @@ function checkWord(e) {
     score.textContent = scoreAva
 }
 
+function resetStat() {
+    gameContainer.style.display = 'block'
+    endgame.style.display = 'none'
+    word.innerText = ''
+    time.textContent = 10;
+    score.textContent = 0;
+    setWord();
+}
+
 function decreaseTime() {
     if(+time.textContent>0) {
         time.textContent = +time.textContent-1;
@@ -92,9 +110,13 @@ function decreaseTime() {
         console.log('Lost');
         clearInterval(interval);
         gameContainer.style.display = 'none';
+        document.querySelector('header').classList.remove('play')
+        document.querySelector('header p').classList.remove('play')
         endgame.style.display = 'flex';
         endgame.innerHTML = `
-
+            <h1>Time  ran out</h1>
+            <p>Your final scores is <span>${score.textContent}</span></p>
+            <button onclick="resetStat()">Play Again</button>
         `
     }
 }
