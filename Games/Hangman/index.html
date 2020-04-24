@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1b8ba3dee0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <a href="#" class="tip">How to play</a>
+        <h1>Hangman</h1>
+        <p>Find the hidden Word - Enter a letter</p>
+        <div class="answers none">
+            <div class="ans">
+                <h2><i class="fa fa-times"></i></h2>
+                <h2>Answer</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="howtoplay none">
+            <div class="tips">
+                <h2><i class="fa fa-times"></i></h2>
+                <h2 class="title">How To Play</h2>
+                <p><span>1. </span> Guess the word by choosing character smartly.</p>
+                <p><span>2. </span> If you choose wrong man's body will grow. You will get 6 attemps.</p>
+                <p><span>3. </span> If you Guess 7 time wrong then you will lose.</p>
+                <p><span>4. </span> You will get hints as per your Bitcoins. 1 hint cost 1 Bitcoin.</p>
+            </div>
+        </div>
+    <div class="hangman">
+        <div class="btn">
+            <div class="coins"><i class="fa fa-coins fa-2x"></i> <span></span></div>
+            <button class="hint">Hint <i class="fa fa-lightbulb"></i></button>
+            <button class="answer">Answer <i class="fa fa-info-circle"></i></button>
+            <div class="wrong-letter-container" id="wrong-letter-container">
+                <div id="wrong-letter">
+                    <p></p>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 178 270" style="enable-background:new 0 0 278 291;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:none;stroke:#fff;stroke-miterlimit:10;}
+            .st1{fill-rule:evenodd;clip-rule:evenodd;}
+        </style>
+        <line class="st0" x1="61.5" y1="50" x2="61.5" y2="262"/>
+        <path class="st0" d="M168.5,224.5"/>
+        <path class="st0" d="M28.5,224.5"/>
+        <line class="st0" x1="61.5" y1="50" x2="115.5" y2="50"/>
+        <line class="st0" x1="115.5" y1="50" x2="115.5" y2="100"/>
+        <path class="st0" d="M115,98.5"/>
+        <line class="st0" x1="25.5" y1="262.5" x2="233.5" y2="262.5"/>
+        <path class="st0" d="M88.5,241.5"/>
+        <path class="st0" d="M138.5,243.5"/>
+        <path class="st0" d="M79.5,142.5"/>
+        <g class="man">
+            <path class="st0 part head" d="M115,98.5c10.91,0,19.62,9.45,18.38,20.61c-0.94,8.48-7.79,15.34-16.28,16.28
+                c-11.16,1.23-20.61-7.47-20.61-18.38C96.5,106.78,104.78,98.5,115,98.5"/>
+            <line class="st0 part body" x1="114.5" y1="135.5" x2="114.5" y2="210"/>
+            <line class="st0 part right-hand" x1="114.5" y1="172.5" x2="154.5" y2="140.5"/>
+            <line class="st0 part left-hand" x1="114.5" y1="172.5" x2="79.5" y2="142.5"/>
+            <line class="st0 part left-leg" x1="114.5" y1="210.5" x2="88.5" y2="241.5"/>
+            <line class="st0 part right-leg" x1="114.5" y1="210.5" x2="138.5" y2="243.5"/>
+            <path class="st0" d="M146.5,184.5"/>
+            <path class="st0" d="M114.5,161.5"/>
+            <path class="st0" d="M88.5,193.5"/>
+            <path class="st0" d="M114.5,161.5"/>
+            </g>
+        </svg>
+        <div class="word" id="word">
+        </div>   
+    </div>
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <p id="realword"></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <div class="notification" id="notification">
+        <p></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

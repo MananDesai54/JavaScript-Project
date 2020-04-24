@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1b8ba3dee0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="start-screen">
+        <h1 class="title">Let's <span>Type</span></h1>
+        <div class="section">
+            <div class="playbtn btn" id="play">
+                <i class="fas fa-play-circle"></i>
+                <div class="hover"><span>Play</span></div>
+            </div>
+            <div class="howtoplay btn" id="howtoplay">
+                <i class="fas fa-question-circle"></i>
+                <div class="hover"><span>How To Play</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="game hide">
+        <div class="game-container">
+            <header><p>Type Fast And Get Benefit</p></header>
+            <div class="dashboard">
+                <div class="game-title">
+                   👩‍💻 Speed Typer 👨‍💻
+                </div>
+                <div class="display-bar">
+                    <div class="time">
+                        Time Left: <span id="time">10</span>s
+                    </div>
+                    <div class="score">
+                        Scores: <span id="score">0</span>
+                    </div>
+                </div>
+                <div class="word">
+                    <h3>Type Following</h3>
+                    <h1 id="word" style="font-family:Verdana, Geneva, Tahoma, sans-serif;"></h1>
+                </div>
+                <div class="input">
+                    <input type="text" id="input" placeholder="type the word here...">
+                </div>
+            </div>
+            <div class="options">
+                <div class="settings option">
+                    <i class="fas fa-cog cog"></i>
+                    <ul class="difficulty">
+                        <li class="easy" id="easy">Easy</li>
+                        <li class="medium" id="medium">Medium</li>
+                        <li class="hard" id="hard">Hard</li>
+                    </ul>
+                </div>
+                <div class="quit option">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </div>
+        </div>
+        <div class="end-game">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

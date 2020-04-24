@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 178 270" style="enable-background:new 0 0 278 291;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px}
+            .st1{fill-rule:evenodd;clip-rule:evenodd;}
+        </style>
+        <line class="st0" x1="115.5" y1="50" x2="115.5" y2="100"/>
+        <g class="man">
+            <path class="st0 part head" d="M115,98.5c10.91,0,19.62,9.45,18.38,20.61c-0.94,8.48-7.79,15.34-16.28,16.28
+                c-11.16,1.23-20.61-7.47-20.61-18.38C96.5,106.78,104.78,98.5,115,98.5"/>
+            <line class="st0 part body" x1="114.5" y1="135.5" x2="114.5" y2="210"/>
+            <line class="st0 part right-hand" x1="114.5" y1="172.5" x2="154.5" y2="140.5"/>
+            <line class="st0 part left-hand" x1="114.5" y1="172.5" x2="79.5" y2="142.5"/>
+            <line class="st0 part left-leg" x1="114.5" y1="210.5" x2="88.5" y2="241.5"/>
+            <line class="st0 part right-leg" x1="114.5" y1="210.5" x2="138.5" y2="243.5"/>
+            </g>
+        </svg>
